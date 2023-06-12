@@ -40,7 +40,7 @@ wget https://github.com/suyashkumar/ssl-proxy/releases/download/v0.2.7/ssl-proxy
 gzip -d ssl-proxy-linux-amd64.tar.gz
 tar -xvf ssl-proxy-linux-amd64.tar
 
-./ssl-proxy-linux-amd64 -from 0.0.0.0:8502 to 0.0.0.0:8501
+./ssl-proxy-linux-amd64 -from 0.0.0.0:8502 -to 0.0.0.0:8501
 ```
 After that you are able to access the app in your browser via https://your-server-ip:8502
 
