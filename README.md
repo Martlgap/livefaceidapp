@@ -32,6 +32,7 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
+Depending on platform and hardware you need to install onnxruntime, onnxruntime-gpu, or onnxruntime-silicon.
 
 ## Locally on server (Tested on Linux)
 If you want to run the app on a server in your local network and would like to access it from another machine in the same network, you can use the [ssl-proxy](https://github.com/suyashkumar/ssl-proxy) plugin of [suyashkumar](https://github.com/suyashkumar):
