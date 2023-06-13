@@ -47,10 +47,10 @@ print(ICE_SERVERS)
 username = os.environ["METERED_USERNAME"]
 credential = os.environ["METERED_CREDENTIAL"]
 ICE_SERVERS = [
-            {   
-                "url": "stun:a.relay.metered.ca:80", 
-                "urls": "stun:a.relay.metered.ca:80"
-            },
+            # {   
+            #     "url": "stun:a.relay.metered.ca:80", 
+            #     "urls": "stun:a.relay.metered.ca:80"
+            # },
             {
                 "url": "turn:a.relay.metered.ca:80",
                 "username": username,
