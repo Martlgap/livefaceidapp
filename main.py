@@ -359,5 +359,8 @@ with st.container():
             rtc_configuration={"iceServers": ICE_SERVERS},
             media_stream_constraints={"video": {"width": 1280}, "audio": False},
         )
-    except:
+    except Exception as e:
         st.error("Error in streaming component. Please try again. If the problem persists, please try another browser.")
+
+        # print the error
+        st.write("Error: ", e)
