@@ -58,9 +58,9 @@ ICE_SERVERS = [
             #     "credential": credential,
             # },
             {
-                "url": "relay1.expressturn.com:3478",
+                "url": "turn:relay1.expressturn.com:3478",
                 "username": "ef3JJKAAYMDIWBBH4R",
-                "urls": "relay1.expressturn.com:3478",
+                "urls": "turn:relay1.expressturn.com:3478",
                 "credential": "9yP8j1CUCVIS9Kia",
             },
             # {
