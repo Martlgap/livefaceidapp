@@ -5,5 +5,5 @@ scikit-learn==1.2.2
 opencv-python-headless==4.7.0.72
 watchdog==3.0.0
 twilio==8.2.1
-onnxruntime-gpu==1.15.0
+onnxruntime==1.15.0
 mediapipe==0.9.3.0
