@@ -327,6 +327,6 @@ with st.container():
         key="LiveFaceRecognition",
         mode=WebRtcMode.SENDRECV,
         video_frame_callback=video_frame_callback,
-        rtc_configuration={"iceServers": ICE_SERVERS},
+        # rtc_configuration={"iceServers": ICE_SERVERS},
         media_stream_constraints={"video": {"width": 1280}, "audio": False},
     )
