@@ -91,3 +91,4 @@ Please take a look at the following resources, which helped me a lot during the 
 # 🪲 BUGS - KNOWN ISSUES - TODOS:
 - [ ] Running the app on streamlit community cloud introduces a severe lag/delay in the video stream. This is also present when working with the app locally on a server. There should be a way to reduce the delay, either by setting the buffer size smaller or by using frame dropping.
 - [ ] There is also sometimes a lag when running the app locally on your machine. This is due to several reasons and need to be investigated further.
+- [ ] Aspect ratio bug on smartphone
