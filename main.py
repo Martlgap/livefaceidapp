@@ -51,17 +51,7 @@ ICE_SERVERS = [
         "urls": "stun:a.relay.metered.ca:80",
       },
       {
-        "urls": "turn:a.relay.metered.ca:80",
-        "username": username,
-        "credential": credential,
-      },
-      {
         "urls": "turn:a.relay.metered.ca:80?transport=tcp",
-        "username": username,
-        "credential": credential,
-      },
-      {
-        "urls": "turn:a.relay.metered.ca:443",
         "username": username,
         "credential": credential,
       },
