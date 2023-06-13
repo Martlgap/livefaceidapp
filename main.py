@@ -58,10 +58,10 @@ ICE_SERVERS = [
             #     "credential": credential,
             # },
             {
-                "url": "turn:a.relay.metered.ca:80?transport=tcp",
-                "username": username,
-                "urls": "turn:a.relay.metered.ca:80?transport=tcp",
-                "credential": credential,
+                "url": "relay1.expressturn.com:3478",
+                "username": "ef3JJKAAYMDIWBBH4R",
+                "urls": "relay1.expressturn.com:3478",
+                "credential": "9yP8j1CUCVIS9Kia",
             },
             # {
             #     "url": "turn:a.relay.metered.ca:443",
@@ -69,12 +69,12 @@ ICE_SERVERS = [
             #     "urls": "turn:a.relay.metered.ca:443",
             #     "credential": credential,
             # },
-            {
-                "url": "turn:a.relay.metered.ca:443?transport=tcp",
-                "username": username,
-                "urls": "turn:a.relay.metered.ca:443?transport=tcp",
-                "credential": credential,
-            },
+            # {
+            #     "url": "turn:a.relay.metered.ca:443?transport=tcp",
+            #     "username": username,
+            #     "urls": "turn:a.relay.metered.ca:443?transport=tcp",
+            #     "credential": credential,
+            # },
   ]
 print(ICE_SERVERS)
 
