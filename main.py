@@ -42,25 +42,25 @@ SIMILARITY_THRESHOLD = 1.0
 
 # Get twilio ice server configuration using twilio credentials from environment variables (set in streamlit secrets)
 # Ref: https://www.twilio.com/docs/stun-turn/api
-# ICE_SERVERS = Client(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"]).tokens.create().ice_servers
+ICE_SERVERS = Client(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"]).tokens.create().ice_servers
 
-username = os.environ["METERED_USERNAME"]
-credential = os.environ["METERED_CREDENTIAL"]
-ICE_SERVERS = [
-      {
-        "urls": "stun:a.relay.metered.ca:80",
-      },
-      {
-        "urls": "turn:a.relay.metered.ca:80?transport=tcp",
-        "username": username,
-        "credential": credential,
-      },
-      {
-        "urls": "turn:a.relay.metered.ca:443?transport=tcp",
-        "username": username,
-        "credential": credential,
-      },
-  ]
+# username = os.environ["METERED_USERNAME"]
+# credential = os.environ["METERED_CREDENTIAL"]
+# ICE_SERVERS = [
+#       {
+#         "urls": "stun:a.relay.metered.ca:80",
+#       },
+#       {
+#         "urls": "turn:a.relay.metered.ca:80?transport=tcp",
+#         "username": username,
+#         "credential": credential,
+#       },
+#       {
+#         "urls": "turn:a.relay.metered.ca:443?transport=tcp",
+#         "username": username,
+#         "credential": credential,
+#       },
+#   ]
 
 
 # Init face detector and face recognizer
