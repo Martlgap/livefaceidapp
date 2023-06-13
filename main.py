@@ -47,19 +47,34 @@ print(ICE_SERVERS)
 username = os.environ["METERED_USERNAME"]
 credential = os.environ["METERED_CREDENTIAL"]
 ICE_SERVERS = [
-      {
-        "urls": "stun:a.relay.metered.ca:80",
-      },
-      {
-        "urls": "turn:a.relay.metered.ca:80?transport=tcp",
-        "username": username,
-        "credential": credential,
-      },
-      {
-        "urls": "turn:a.relay.metered.ca:443?transport=tcp",
-        "username": username,
-        "credential": credential,
-      },
+            {   
+                "url": "stun:a.relay.metered.ca:80", 
+                "urls": "stun:a.relay.metered.ca:80"
+            },
+            {
+                "url": "turn:a.relay.metered.ca:80",
+                "username": username,
+                "urls": "turn:a.relay.metered.ca:80",
+                "credential": credential,
+            },
+            {
+                "url": "turn:a.relay.metered.ca:80?transport=tcp",
+                "username": username,
+                "urls": "turn:a.relay.metered.ca:80?transport=tcp",
+                "credential": credential,
+            },
+            {
+                "url": "turn:a.relay.metered.ca:443",
+                "username": username,
+                "urls": "turn:a.relay.metered.ca:443",
+                "credential": credential,
+            },
+            {
+                "url": "turn:a.relay.metered.ca:443?transport=tcp",
+                "username": username,
+                "urls": "turn:a.relay.metered.ca:443?transport=tcp",
+                "credential": credential,
+            },
   ]
 print(ICE_SERVERS)
 
