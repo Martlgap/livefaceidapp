@@ -322,13 +322,13 @@ st.markdown("**Live Stream**")
 
 # Start streaming component
 with st.container():
-    try:
-        webrtc_streamer(
-            key="LiveFaceRecognition",
-            mode=WebRtcMode.SENDRECV,
-            video_frame_callback=video_frame_callback,
-            rtc_configuration={"iceServers": ICE_SERVERS},
-            media_stream_constraints={"video": {"width": 1280}, "audio": False},
-        )
-    except:
-        st.error("There is a problem with your webcam. Try a different Browser or device.")
+
+    webrtc_streamer(
+        key="LiveFaceRecognition",
+        mode=WebRtcMode.SENDRECV,
+        video_frame_callback=video_frame_callback,
+        rtc_configuration={"iceServers": ICE_SERVERS},
+        media_stream_constraints={"video": {"width": 1280}, "audio": False},
+    )
+    # except:
+    #     st.error("There is a problem with your webcam. Try a different Browser or device.")

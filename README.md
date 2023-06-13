@@ -1,7 +1,7 @@
 # Live Face Recognition App
 This is a Streamlit App that allows you to recognize faces in a live webcam video stream. Check out the app on the [Streamlit Community Cloud](https://streamlit.io/cloud) by clicking on the badge below:
 
-[![Streamlit Community Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://martlgap-livefaceidapp-main-mbi55e.streamlit.app)
+[![Streamlit Community Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://livefaceid.streamlit.app)
 
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -17,7 +17,7 @@ As an example, instead of using a webcam I fed a snippet of BigBangTheory into t
 ## Run the App on Streamlit Community Cloud
 You can run my app in your Browser using the [Streamlit Community Cloud](https://streamlit.io/cloud) by clicking on the badge below:
 
-[![Open in Streamlit Community](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://martlgap-livefaceidapp-main-mbi55e.streamlit.app)
+[![Open in Streamlit Community](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://livefaceid.streamlit.app)
 
 
 ## Locally on your machine (Tested on MacOS, Linux)
