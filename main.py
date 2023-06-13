@@ -43,41 +43,6 @@ SIMILARITY_THRESHOLD = 1.0
 # Get twilio ice server configuration using twilio credentials from environment variables (set in streamlit secrets)
 # Ref: https://www.twilio.com/docs/stun-turn/api
 ICE_SERVERS = Client(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"]).tokens.create().ice_servers
-print(ICE_SERVERS)
-username = os.environ["METERED_USERNAME"]
-credential = os.environ["METERED_CREDENTIAL"]
-ICE_SERVERS = [
-            # {   
-            #     "url": "stun:a.relay.metered.ca:80", 
-            #     "urls": "stun:a.relay.metered.ca:80"
-            # },
-            # {
-            #     "url": "turn:a.relay.metered.ca:80",
-            #     "username": username,
-            #     "urls": "turn:a.relay.metered.ca:80",
-            #     "credential": credential,
-            # },
-            {
-                "url": "turn:relay1.expressturn.com:3478",
-                "username": "ef3JJKAAYMDIWBBH4R",
-                "urls": "turn:relay1.expressturn.com:3478",
-                "credential": "9yP8j1CUCVIS9Kia",
-            },
-            # {
-            #     "url": "turn:a.relay.metered.ca:443",
-            #     "username": username,
-            #     "urls": "turn:a.relay.metered.ca:443",
-            #     "credential": credential,
-            # },
-            # {
-            #     "url": "turn:a.relay.metered.ca:443?transport=tcp",
-            #     "username": username,
-            #     "urls": "turn:a.relay.metered.ca:443?transport=tcp",
-            #     "credential": credential,
-            # },
-  ]
-print(ICE_SERVERS)
-
 
 # Init face detector and face recognizer
 FACE_RECOGNIZER = rt.InferenceSession("model.onnx", providers=rt.get_available_providers())
@@ -357,10 +322,13 @@ st.markdown("**Live Stream**")
 
 # Start streaming component
 with st.container():
-    webrtc_streamer(
-        key="LiveFaceRecognition",
-        mode=WebRtcMode.SENDRECV,
-        video_frame_callback=video_frame_callback,
-        rtc_configuration={"iceServers": ICE_SERVERS},
-        media_stream_constraints={"video": {"width": 1280}, "audio": False},
-    )
+    try:
+        webrtc_streamer(
+            key="LiveFaceRecognition",
+            mode=WebRtcMode.SENDRECV,
+            video_frame_callback=video_frame_callback,
+            rtc_configuration={"iceServers": ICE_SERVERS},
+            media_stream_constraints={"video": {"width": 1280}, "audio": False},
+        )
+    except:
+        st.error("There is a problem with your webcam. Try a different Browser or device.")
