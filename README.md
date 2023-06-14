@@ -10,6 +10,8 @@ This is a Streamlit App that allows you to recognize faces in a live webcam vide
 
 # 👀 Example
 As an example, instead of using a webcam I fed a snippet of BigBangTheory into the app and it recognized the characters in real-time:
+
+
 ![Demo](example.gif)
 
 
