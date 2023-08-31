@@ -1,9 +1,10 @@
 streamlit==1.22.0
 streamlit-webrtc==0.45.0
-scikit-image==0.18.3
+scikit-image==0.21.0
 scikit-learn==1.2.2
 opencv-python-headless==4.7.0.72
 watchdog==3.0.0
 twilio==8.2.1
 onnxruntime==1.15.0
 mediapipe==0.9.3.0
+aiortc==1.5.0

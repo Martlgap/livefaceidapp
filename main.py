@@ -42,7 +42,7 @@ SIMILARITY_THRESHOLD = 1.0
 
 # Get twilio ice server configuration using twilio credentials from environment variables (set in streamlit secrets)
 # Ref: https://www.twilio.com/docs/stun-turn/api
-ICE_SERVERS = Client(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"]).tokens.create().ice_servers
+# ICE_SERVERS = Client(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"]).tokens.create().ice_servers
 
 # Init face detector and face recognizer
 FACE_RECOGNIZER = rt.InferenceSession("model.onnx", providers=rt.get_available_providers())
@@ -320,14 +320,20 @@ gal_container.image(image=[identity.face for identity in gallery], caption=[iden
 # Main window for stream
 st.markdown("**Live Stream**")
 
+# Create Player for Local File
+def create_player():
+     from aiortc.contrib.media import MediaPlayer
+     return MediaPlayer("./video.mov")
+
 # Start streaming component
 with st.container():
 
     webrtc_streamer(
         key="LiveFaceRecognition",
-        mode=WebRtcMode.SENDRECV,
+        mode=WebRtcMode.RECVONLY,
         video_frame_callback=video_frame_callback,
-        rtc_configuration={"iceServers": ICE_SERVERS},
+        player_factory=create_player,
+        # rtc_configuration={"iceServers": ICE_SERVERS},
         media_stream_constraints={"video": {"width": 1280}, "audio": False},
     )
     # except:
